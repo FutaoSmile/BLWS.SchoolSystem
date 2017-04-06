@@ -7,13 +7,13 @@ namespace BLWS.SchoolSystem.EF.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class d : IMigrationMetadata
+    public sealed partial class de : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(d));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(de));
         
         string IMigrationMetadata.Id
         {
-            get { return "201703311058176_d"; }
+            get { return "201704051311599_de"; }
         }
         
         string IMigrationMetadata.Source

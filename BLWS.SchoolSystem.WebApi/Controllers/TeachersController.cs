@@ -18,7 +18,7 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
         private SystemDbContext db = new SystemDbContext();
 
         // GET: api/Teachers
-        public IQueryable<Teacher> GetTeahers()
+        public IQueryable<Teacher> GetTeachers()
         {
             return db.Teahers;
         }
@@ -115,5 +115,17 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
         {
             return db.Teahers.Count(e => e.ID == id) > 0;
         }
+
+        /// <summary>
+        /// 根据条件查询教师
+        /// </summary>
+        /// <param name="id">学校的ID</param>
+        /// <returns></returns>
+        //[ResponseType(typeof(Teacher))]
+        //public IQueryable<Teacher> SelectTeachers(int id)
+        //{
+
+        //    return db.Teahers.Where(u=>u.==id);
+        //}
     }
 }

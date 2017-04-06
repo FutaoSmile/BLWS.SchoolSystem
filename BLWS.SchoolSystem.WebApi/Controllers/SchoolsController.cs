@@ -10,6 +10,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using BLWS.SchoolSystem.EF.Entity;
 using BLWS.SchoolSystem.EF.SystemDbContext;
+using Newtonsoft.Json;
 
 namespace BLWS.SchoolSystem.WebApi.Controllers
 {
@@ -71,10 +72,13 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
+        //新增学校 
         // POST: api/Schools
+        [HttpPost]
         [ResponseType(typeof(School))]
-        public IHttpActionResult PostSchool(School school)
+        public IHttpActionResult SchoolPost(School school)
         {
+            //school = JsonConvert.DeserializeObject<School>(thx);
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -87,8 +91,9 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
         }
 
         // DELETE: api/Schools/5
+        [HttpPost]
         [ResponseType(typeof(School))]
-        public IHttpActionResult DeleteSchool(int id)
+        public IHttpActionResult SchoolDelete(int id)
         {
             School school = db.Schools.Find(id);
             if (school == null)

@@ -8,6 +8,13 @@ namespace BLWS.SchoolSystem.EF.Entity
 {
    public class BaseEntity
     {
+        public BaseEntity()
+        {
+            CreateTime = DateTime.Now;
+            UpdateTime = DateTime.Now;
+            CreateBy = "Admin_Create";
+            UpdateBy = "Admin_Update";
+        }
         /// <summary>
         /// 该数据的创建时间
         /// </summary>
@@ -24,14 +31,5 @@ namespace BLWS.SchoolSystem.EF.Entity
         /// 该条数据的更新人
         /// </summary>
         public string UpdateBy { get; set; }
-
-        public BaseEntity()
-        {
-            CreateTime = DateTime.Now;
-            UpdateTime = DateTime.Now;
-            CreateBy = "Admin_Create";
-            UpdateBy = "Admin_Update";
-        }
-    
     }
 }

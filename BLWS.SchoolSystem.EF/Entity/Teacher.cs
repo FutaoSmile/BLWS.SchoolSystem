@@ -29,9 +29,8 @@ namespace BLWS.SchoolSystem.EF.Entity
         /// </summary>
         public string Office { get; set; }
         /// <summary>
-        /// 所属学校名称
+        /// 一个教师只属于一个学校
         /// </summary>
-        public string SchoolName { get; set; }
-
+        public virtual School School{get;set;}
     }
 }

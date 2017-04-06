@@ -54,21 +54,9 @@
     <Compile Include="Entity\Score.cs" />
     <Compile Include="Entity\Student.cs" />
     <Compile Include="Entity\Teacher.cs" />
-    <Compile Include="Migrations\201703311058176_d.cs" />
-    <Compile Include="Migrations\201703311058176_d.Designer.cs">
-      <DependentUpon>201703311058176_d.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703311103203_d1.cs" />
-    <Compile Include="Migrations\201703311103203_d1.Designer.cs">
-      <DependentUpon>201703311103203_d1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703311118074_d2.cs" />
-    <Compile Include="Migrations\201703311118074_d2.Designer.cs">
-      <DependentUpon>201703311118074_d2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703311147366_ad.cs" />
-    <Compile Include="Migrations\201703311147366_ad.Designer.cs">
-      <DependentUpon>201703311147366_ad.cs</DependentUpon>
+    <Compile Include="Migrations\201704051311599_de.cs" />
+    <Compile Include="Migrations\201704051311599_de.Designer.cs">
+      <DependentUpon>201704051311599_de.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,17 +67,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201703311058176_d.resx">
-      <DependentUpon>201703311058176_d.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703311103203_d1.resx">
-      <DependentUpon>201703311103203_d1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703311118074_d2.resx">
-      <DependentUpon>201703311118074_d2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703311147366_ad.resx">
-      <DependentUpon>201703311147366_ad.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704051311599_de.resx">
+      <DependentUpon>201704051311599_de.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
