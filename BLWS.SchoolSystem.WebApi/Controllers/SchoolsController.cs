@@ -18,12 +18,21 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
     {
         private SystemDbContext db = new SystemDbContext();
 
+        /// <summary>
+        /// 获取所有学校的信息
+        /// </summary>
+        /// <returns></returns>
         // GET: api/Schools
         public IQueryable<School> GetSchools()
         {
             return db.Schools;
         }
 
+        /// <summary>
+        /// 通过ID获取一所学校
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // GET: api/Schools/5
         [ResponseType(typeof(School))]
         public IHttpActionResult GetSchool(int id)
@@ -37,9 +46,15 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
             return Ok(school);
         }
 
+        /// <summary>
+        /// 修改学校的信息
+        /// </summary>
+        /// <param name="id">学校的ID</param>
+        /// <param name="school">学校对象</param>
+        /// <returns></returns>
         // PUT: api/Schools/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutSchool(int id, School school)
+        public IHttpActionResult SchoolUpdate(int id, School school)
         {
             if (!ModelState.IsValid)
             {
@@ -72,17 +87,21 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        //新增学校 
+        /// <summary>
+        /// 新增学校
+        /// </summary>
+        /// <param name="school">学校的对象</param>
+        /// <returns></returns>
         // POST: api/Schools
         [HttpPost]
         [ResponseType(typeof(School))]
         public IHttpActionResult SchoolPost(School school)
         {
             //school = JsonConvert.DeserializeObject<School>(thx);
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    return BadRequest(ModelState);
+            //}
 
             db.Schools.Add(school);
             db.SaveChanges();
@@ -90,6 +109,11 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
             return CreatedAtRoute("DefaultApi", new { id = school.ID }, school);
         }
 
+        /// <summary>
+        /// 删除学校
+        /// </summary>
+        /// <param name="id">学校ID</param>
+        /// <returns></returns>
         // DELETE: api/Schools/5
         [HttpPost]
         [ResponseType(typeof(School))]
