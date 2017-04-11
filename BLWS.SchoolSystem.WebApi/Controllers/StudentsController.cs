@@ -38,7 +38,7 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
 
         // PUT: api/Students/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult StudentUpdate(int id, Student student)
+        public IHttpActionResult PutStudent(int id, Student student)
         {
             if (!ModelState.IsValid)
             {

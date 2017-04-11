@@ -13,6 +13,10 @@ namespace BLWS.SchoolSystem.EF.Entity
         /// </summary>
         public int ID { get; set; }
         /// <summary>
+        /// 学号
+        /// </summary>
+        public string StudentNO { get; set; }
+        /// <summary>
         /// 学生名字
         /// </summary>
         public string StudentName { get; set; }
@@ -32,14 +36,5 @@ namespace BLWS.SchoolSystem.EF.Entity
         /// 所属班级名称
         /// </summary>
         public string ClassName { get; set; }
-
-        /// <summary>
-        /// 一个学生可以有N门课程
-        /// </summary>
-        public virtual List<Course> Courses { get; set; }
-        /// <summary>
-        /// 一个学生可以有N个成绩
-        /// </summary>
-        public virtual List<Score> Scores { get; set; }
     }
 }

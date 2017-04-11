@@ -22,14 +22,14 @@ namespace BLWS.SchoolSystem.EF.SystemDbContext
             //二：每次启动应用程序时创建数据库
             //Database.SetInitializer<testContext>(new DropCreateDatabaseAlways<SpreadtrumPMMContext>());
             //三：策略三：模型更改时重新创建数据库
-            //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<CodeFirstDBContext>());
+           // Database.SetInitializer(new DropCreateDatabaseIfModelChanges<SystemDbContext>());
             //策略四：从不创建数据库 
             //Database.SetInitializer<CodeFirstDBContext>(null);
         }
         public virtual DbSet<Class> Classes { get; set; }
         public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<School> Schools { get; set; }
-        public virtual DbSet<Score> Scores { get; set; }
+        public virtual DbSet<ScoreTable> ScoreTables { get; set; }
         public virtual DbSet<Student> Students { get; set; }
         public virtual DbSet<Teacher> Teahers { get; set; }
 

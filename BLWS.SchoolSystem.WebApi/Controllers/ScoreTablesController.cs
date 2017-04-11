@@ -13,44 +13,44 @@ using BLWS.SchoolSystem.EF.SystemDbContext;
 
 namespace BLWS.SchoolSystem.WebApi.Controllers
 {
-    public class ScoresController : ApiController
+    public class ScoreTablesController : ApiController
     {
         private SystemDbContext db = new SystemDbContext();
 
-        // GET: api/Scores
-        public IQueryable<Score> GetScores()
+        // GET: api/ScoreTables
+        public IQueryable<ScoreTable> GetScoreTables()
         {
-            return db.Scores;
+            return db.ScoreTables;
         }
 
-        // GET: api/Scores/5
-        [ResponseType(typeof(Score))]
-        public IHttpActionResult GetScore(int id)
+        // GET: api/ScoreTables/5
+        [ResponseType(typeof(ScoreTable))]
+        public IHttpActionResult GetScoreTable(int id)
         {
-            Score score = db.Scores.Find(id);
-            if (score == null)
+            ScoreTable scoreTable = db.ScoreTables.Find(id);
+            if (scoreTable == null)
             {
                 return NotFound();
             }
 
-            return Ok(score);
+            return Ok(scoreTable);
         }
 
-        // PUT: api/Scores/5
+        // PUT: api/ScoreTables/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutScore(int id, Score score)
+        public IHttpActionResult PutScoreTable(int id, ScoreTable scoreTable)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != score.ID)
+            if (id != scoreTable.ID)
             {
                 return BadRequest();
             }
 
-            db.Entry(score).State = EntityState.Modified;
+            db.Entry(scoreTable).State = EntityState.Modified;
 
             try
             {
@@ -58,7 +58,7 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ScoreExists(id))
+                if (!ScoreTableExists(id))
                 {
                     return NotFound();
                 }
@@ -71,35 +71,35 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Scores
-        [ResponseType(typeof(Score))]
-        public IHttpActionResult PostScore(Score score)
+        // POST: api/ScoreTables
+        [ResponseType(typeof(ScoreTable))]
+        public IHttpActionResult PostScoreTable(ScoreTable scoreTable)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Scores.Add(score);
+            db.ScoreTables.Add(scoreTable);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = score.ID }, score);
+            return CreatedAtRoute("DefaultApi", new { id = scoreTable.ID }, scoreTable);
         }
 
-        // DELETE: api/Scores/5
-        [ResponseType(typeof(Score))]
-        public IHttpActionResult DeleteScore(int id)
+        // DELETE: api/ScoreTables/5
+        [ResponseType(typeof(ScoreTable))]
+        public IHttpActionResult DeleteScoreTable(int id)
         {
-            Score score = db.Scores.Find(id);
-            if (score == null)
+            ScoreTable scoreTable = db.ScoreTables.Find(id);
+            if (scoreTable == null)
             {
                 return NotFound();
             }
 
-            db.Scores.Remove(score);
+            db.ScoreTables.Remove(scoreTable);
             db.SaveChanges();
 
-            return Ok(score);
+            return Ok(scoreTable);
         }
 
         protected override void Dispose(bool disposing)
@@ -111,9 +111,9 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
             base.Dispose(disposing);
         }
 
-        private bool ScoreExists(int id)
+        private bool ScoreTableExists(int id)
         {
-            return db.Scores.Count(e => e.ID == id) > 0;
+            return db.ScoreTables.Count(e => e.ID == id) > 0;
         }
     }
 }

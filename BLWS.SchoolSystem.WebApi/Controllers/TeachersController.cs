@@ -17,12 +17,21 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
     {
         private SystemDbContext db = new SystemDbContext();
 
+        /// <summary>
+        /// 获取所有教师信息
+        /// </summary>
+        /// <returns></returns>
         // GET: api/Teachers
         public IQueryable<Teacher> GetTeachers()
         {
             return db.Teahers;
         }
 
+        /// <summary>
+        /// 通过ID获取单个教师信息
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // GET: api/Teachers/5
         [ResponseType(typeof(Teacher))]
         public IHttpActionResult GetTeacher(int id)
@@ -36,6 +45,12 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
             return Ok(teacher);
         }
 
+        /// <summary>
+        /// 修改教师信息
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="teacher"></param>
+        /// <returns></returns>
         // PUT: api/Teachers/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutTeacher(int id, Teacher teacher)
@@ -70,7 +85,11 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
 
             return StatusCode(HttpStatusCode.NoContent);
         }
-
+        /// <summary>
+        /// 新增教师
+        /// </summary>
+        /// <param name="teacher"></param>
+        /// <returns></returns>
         // POST: api/Teachers
         [ResponseType(typeof(Teacher))]
         public IHttpActionResult PostTeacher(Teacher teacher)
@@ -85,8 +104,13 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
 
             return CreatedAtRoute("DefaultApi", new { id = teacher.ID }, teacher);
         }
-
+        /// <summary>
+        /// 删除教师
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // DELETE: api/Teachers/5
+        [HttpPost]
         [ResponseType(typeof(Teacher))]
         public IHttpActionResult DeleteTeacher(int id)
         {
@@ -115,17 +139,5 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
         {
             return db.Teahers.Count(e => e.ID == id) > 0;
         }
-
-        /// <summary>
-        /// 根据条件查询教师
-        /// </summary>
-        /// <param name="id">学校的ID</param>
-        /// <returns></returns>
-        //[ResponseType(typeof(Teacher))]
-        //public IQueryable<Teacher> SelectTeachers(int id)
-        //{
-
-        //    return db.Teahers.Where(u=>u.==id);
-        //}
     }
 }

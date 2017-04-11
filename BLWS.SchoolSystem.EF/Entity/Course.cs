@@ -28,14 +28,5 @@ namespace BLWS.SchoolSystem.EF.Entity
         /// 课程属性
         /// </summary>
         public string Property { get; set; }
-
-        /// <summary>
-        /// 一门课程有N个学生
-        /// </summary>
-        public virtual List<Student> Students { get; set; }
-        /// <summary>
-        /// 一门课程有N个老师
-        /// </summary>
-        public virtual List<Teacher> Teachers { get; set; }
     }
 }

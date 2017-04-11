@@ -51,12 +51,28 @@
     <Compile Include="Entity\Class.cs" />
     <Compile Include="Entity\Course.cs" />
     <Compile Include="Entity\School.cs" />
-    <Compile Include="Entity\Score.cs" />
+    <Compile Include="Entity\ScoreTable.cs" />
     <Compile Include="Entity\Student.cs" />
     <Compile Include="Entity\Teacher.cs" />
-    <Compile Include="Migrations\201704051311599_de.cs" />
-    <Compile Include="Migrations\201704051311599_de.Designer.cs">
-      <DependentUpon>201704051311599_de.cs</DependentUpon>
+    <Compile Include="Migrations\201704110334333_ff.cs" />
+    <Compile Include="Migrations\201704110334333_ff.Designer.cs">
+      <DependentUpon>201704110334333_ff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111109161_de.cs" />
+    <Compile Include="Migrations\201704111109161_de.Designer.cs">
+      <DependentUpon>201704111109161_de.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111111068_de1.cs" />
+    <Compile Include="Migrations\201704111111068_de1.Designer.cs">
+      <DependentUpon>201704111111068_de1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111118435_de2.cs" />
+    <Compile Include="Migrations\201704111118435_de2.Designer.cs">
+      <DependentUpon>201704111118435_de2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704111120196_de3.cs" />
+    <Compile Include="Migrations\201704111120196_de3.Designer.cs">
+      <DependentUpon>201704111120196_de3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,8 +83,20 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201704051311599_de.resx">
-      <DependentUpon>201704051311599_de.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704110334333_ff.resx">
+      <DependentUpon>201704110334333_ff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111109161_de.resx">
+      <DependentUpon>201704111109161_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111111068_de1.resx">
+      <DependentUpon>201704111111068_de1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111118435_de2.resx">
+      <DependentUpon>201704111118435_de2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704111120196_de3.resx">
+      <DependentUpon>201704111120196_de3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

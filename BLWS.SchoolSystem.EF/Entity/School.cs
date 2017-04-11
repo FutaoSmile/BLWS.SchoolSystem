@@ -37,12 +37,5 @@ namespace BLWS.SchoolSystem.EF.Entity
         /// 学校邮编
         /// </summary>
         public string PostCode { get; set; }
-
-
-
-        /// <summary>
-        /// 一个学校有多个老师
-        /// </summary>
-        public virtual List<Teacher> Teachers { get; set; }
     }
 }
