@@ -17,6 +17,10 @@ namespace BLWS.SchoolSystem.EF.Entity
         /// 班级名称
         /// </summary>
         public string ClassName { get; set; }
+        /// <summary>
+        /// 班级辅导员
+        /// </summary>
+        public string ClassMaster { get; set; }
 
         /// <summary>
         /// 一个班级有N个学生

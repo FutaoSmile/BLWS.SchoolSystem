@@ -16,6 +16,18 @@ namespace BLWS.SchoolSystem.EF.Entity
         /// 课程名称
         /// </summary>
         public string CourseName { get; set; }
+        /// <summary>
+        /// 学分
+        /// </summary>
+        public string Credit { get; set; }
+        /// <summary>
+        /// 课程介绍
+        /// </summary>
+        public string Description { get; set; }
+        /// <summary>
+        /// 课程属性
+        /// </summary>
+        public string Property { get; set; }
 
         /// <summary>
         /// 一门课程有N个学生
