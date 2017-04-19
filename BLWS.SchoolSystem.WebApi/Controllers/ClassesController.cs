@@ -37,6 +37,7 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
         }
 
         // PUT: api/Classes/5
+        [HttpPost]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutClass(int id, Class @class)
         {
@@ -73,6 +74,7 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
 
         // POST: api/Classes
         [ResponseType(typeof(Class))]
+        [HttpPost]
         public IHttpActionResult PostClass(Class @class)
         {
             if (!ModelState.IsValid)

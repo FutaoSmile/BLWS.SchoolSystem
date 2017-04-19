@@ -45,6 +45,11 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
             return Ok(teacher);
         }
 
+        public IQueryable<Teacher> GetTeachersByCourse(string course)
+        {
+            return db.Teahers.Where(u=>u.CourseName==course);
+        }
+
         /// <summary>
         /// 修改教师信息
         /// </summary>
@@ -52,6 +57,7 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
         /// <param name="teacher"></param>
         /// <returns></returns>
         // PUT: api/Teachers/5
+        [HttpPost]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutTeacher(int id, Teacher teacher)
         {

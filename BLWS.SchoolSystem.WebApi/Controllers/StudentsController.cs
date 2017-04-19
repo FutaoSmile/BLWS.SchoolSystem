@@ -35,9 +35,25 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
 
             return Ok(student);
         }
+        
+        // GET: api/Students/5
+        /// <summary>
+        /// 通过班级名称获取班级学生列表
+        /// </summary>
+        /// <param name="value">值</param>
+        /// <returns></returns>
+        public IQueryable<Student> GetStudentsByClassName(string ClassName)
+        {
+
+            return db.Students.Where(u => u.ClassName == ClassName);
+        }
+        public int GetCountByClassName(string className) {
+            return (db.Students.Where(u => u.ClassName == className)).Count();
+        }
 
         // PUT: api/Students/5
         [ResponseType(typeof(void))]
+        [HttpPost]
         public IHttpActionResult PutStudent(int id, Student student)
         {
             if (!ModelState.IsValid)
@@ -87,6 +103,7 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
         }
 
         // DELETE: api/Students/5
+        [HttpPost]
         [ResponseType(typeof(Student))]
         public IHttpActionResult DeleteStudent(int id)
         {

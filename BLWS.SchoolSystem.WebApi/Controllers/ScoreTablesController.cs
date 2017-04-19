@@ -22,6 +22,16 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
         {
             return db.ScoreTables;
         }
+        /// <summary>
+        /// 获取每门课的选课人数
+        /// </summary>
+        /// <param name="CourseName">课程名称</param>
+        /// <returns>已选该门课的人数</returns>
+        [HttpGet]
+        public int CountByCourseName(string CourseName) {
+            return db.ScoreTables.Where(u => u.CourseName == CourseName).Count();
+        }
+
 
         // GET: api/ScoreTables/5
         [ResponseType(typeof(ScoreTable))]
@@ -38,6 +48,7 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
 
         // PUT: api/ScoreTables/5
         [ResponseType(typeof(void))]
+        [HttpPost]
         public IHttpActionResult PutScoreTable(int id, ScoreTable scoreTable)
         {
             if (!ModelState.IsValid)

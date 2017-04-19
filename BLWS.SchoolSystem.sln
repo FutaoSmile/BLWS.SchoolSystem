@@ -1,31 +1,31 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLWS.SchoolSystem.EF", "BLWS.SchoolSystem.EF\BLWS.SchoolSystem.EF.csproj", "{D6F08206-F232-48BA-9C22-7DACD2C610D0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLWS.SchoolSystem.WebApi", "BLWS.SchoolSystem.WebApi\BLWS.SchoolSystem.WebApi.csproj", "{B2BE2BDA-7077-429F-8534-D73B334318A1}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BLWS.SchoolSystem.App(1)", "..\..\WebSites\BLWS.SchoolSystem.App\", "{487EED89-8416-44D4-A865-40CC43D29D30}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BLWS.SchoolSystem.App(2)", "..\BLWS.SchoolSystem.App\", "{7C1F238F-30C4-4F36-8D12-AB0825443658}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_49681"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\BLWS.SchoolSystem.App\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49681\"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51113"
+		Debug.AspNetCompiler.PhysicalPath = "..\BLWS.SchoolSystem.App\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51113\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_49681"
-		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\BLWS.SchoolSystem.App\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49681\"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51113"
+		Release.AspNetCompiler.PhysicalPath = "..\BLWS.SchoolSystem.App\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51113\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "49681"
-		DefaultWebSiteLanguage = "Visual C#"
+		VWDPort = "51113"
+		SlnRelativePath = "..\BLWS.SchoolSystem.App\"
 	EndProjectSection
 EndProject
 Global
@@ -42,10 +42,10 @@ Global
 		{B2BE2BDA-7077-429F-8534-D73B334318A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2BE2BDA-7077-429F-8534-D73B334318A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2BE2BDA-7077-429F-8534-D73B334318A1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{487EED89-8416-44D4-A865-40CC43D29D30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{487EED89-8416-44D4-A865-40CC43D29D30}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{487EED89-8416-44D4-A865-40CC43D29D30}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{487EED89-8416-44D4-A865-40CC43D29D30}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{7C1F238F-30C4-4F36-8D12-AB0825443658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C1F238F-30C4-4F36-8D12-AB0825443658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C1F238F-30C4-4F36-8D12-AB0825443658}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C1F238F-30C4-4F36-8D12-AB0825443658}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

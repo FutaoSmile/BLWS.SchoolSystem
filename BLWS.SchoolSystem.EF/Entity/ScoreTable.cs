@@ -30,7 +30,7 @@ namespace BLWS.SchoolSystem.EF.Entity
         /// <summary>
         /// 成绩
         /// </summary>
-        public double Score { get; set; }
+        public string Score { get; set; }
         /// <summary>
         /// 教师名称
         /// </summary>

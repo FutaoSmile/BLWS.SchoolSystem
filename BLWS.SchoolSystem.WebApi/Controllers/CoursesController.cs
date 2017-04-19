@@ -37,6 +37,7 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
         }
 
         // PUT: api/Courses/5
+        [HttpPost]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutCourse(int id, Course course)
         {
@@ -88,6 +89,7 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
 
         // DELETE: api/Courses/5
         [ResponseType(typeof(Course))]
+        [HttpPost]
         public IHttpActionResult DeleteCourse(int id)
         {
             Course course = db.Courses.Find(id);
