@@ -90,6 +90,7 @@ namespace BLWS.SchoolSystem.WebApi.Controllers
 
         // DELETE: api/Classes/5
         [ResponseType(typeof(Class))]
+        [HttpPost]
         public IHttpActionResult DeleteClass(int id)
         {
             Class @class = db.Classes.Find(id);
